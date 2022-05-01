@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AutodeskAppStore.Entitlement</name>
+    </assembly>
+    <members>
+        <member name="M:AutodeskAppStore.Entitlement.EntitlementService.ValidAppUser(Inventor.Application,System.String)">
+            <summary>
+            Checks if the current user has a valid Autodesk App Store Entitlement to use the App with the specified App ID
+            </summary>
+            <param name="inventor"></param>
+            <param name="AppID">Can be obtained from the Autodesk App Store Publisher Corner</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

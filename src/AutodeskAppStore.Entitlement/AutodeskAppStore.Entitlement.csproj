@@ -1,0 +1,43 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Authors>Growler</Authors>
+    <Description>Check to see if the currently Inventor user has a valid entitlement to use an Autodesk App Store App.</Description>
+    <Copyright>2022</Copyright>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <RepositoryUrl>https://github.com/growlerdev/AutodeskAppStore.Entitlement</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>Autodesk AppStore Inventor Entitlement</PackageTags>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+  </PropertyGroup>  
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>C:\Projects\AutodeskAppStore.Entitlement\src\AutodeskAppStore.Entitlement\AutodeskAppStore.Entitlement.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="RestSharp" Version="106.11.7" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <None Include="..\..\README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="AddinNETFramework.AdWebServicesWrapper">
+      <HintPath>..\..\lib\AddinNETFramework.AdWebServicesWrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Autodesk.Inventor.Interop">
+      <HintPath>..\..\lib\Autodesk.Inventor.Interop.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="AutodeskAppStore.Entitlement.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
