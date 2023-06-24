@@ -13,6 +13,9 @@ steps:
 - task: NuGetToolInstaller@1
   displayName: 'Use NuGet'
 
+- checkout: self
+  fetchDepth: 0
+
 - task: gitversion/setup@0
   displayName: Setup GitVersion
   inputs:
